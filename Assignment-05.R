@@ -1,6 +1,9 @@
 rm(list=ls(all=TRUE))
 cat("\014")
 
+if (!require("data.table")) install.packages("data.table")
+library("data.table")
+
 header <- read.table("A191RL1Q225SBEA.csv", header = TRUE,
                      sep=",", nrow = 1)
 A191RL1Q225SBEA <- fread("A191RL1Q225SBEA.csv",
